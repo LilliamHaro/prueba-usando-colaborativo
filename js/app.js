@@ -26,7 +26,7 @@ $(document).ready(function() {
       $('#peliculas div img').on('click', function() {
         $('#click-movie').empty();
         var dataIdMovie = $(this).data('id');
-        // alert(dataIdMovie);
+        alert(dataIdMovie);
         $.getJSON('http://www.omdbapi.com/?i=' + dataIdMovie + '&page=2&apikey=cde77cc6').then(function(response) {
           var mTitle = response.Title;
           var mPoster = $('<div><img  src="' + response.Poster + '"height=120px width= 70px data-id ="' + idMovie + '"></div>');
